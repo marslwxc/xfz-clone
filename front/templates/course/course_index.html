@@ -1,0 +1,45 @@
+{% extends 'base/front_base.html' %}
+
+{% block title %}
+    课程列表页
+{% endblock title %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/course/course_index.min.css' %}">   
+{% endblock head %}
+
+{% block main %}
+    <div class="main">
+        <div class="course-nav">
+            <div class="nav-container">
+                <h3 class="title">在线课堂</h3>
+                <ul class="nav-list">
+                    <li class="active"><a href="#">最新课堂</a></li>
+                    {% for coursecategory in coursecategories %}
+                        <li><a href="#">{{ coursecategory.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <ul class="course-list">
+                {% for course in courses %}
+                    <li>
+                        <a href="#">
+                            <div class="thumbnail-group">
+                                <img src="{{ course.cover_url }}" alt="" class="thumbnail">
+                            </div>
+                            <div class="course-info">
+                                <p class="title">{{ course.title }}</p>
+                                <p class="author">{{ course.teacher.username }}  / {{ course.teacher.jobtitle }}</p>
+                                <p class="price-group">
+                                    <span class="free">{{ course.price }}</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock main %}
