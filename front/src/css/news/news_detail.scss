@@ -1,0 +1,141 @@
+@import "../common/init.scss";
+@import "../common/constants.scss";
+@import "../common/header.scss";
+@import "../common/body.scss";
+@import "../common/footer.scss";
+.main {
+    .wrapper {
+        .main-content-wrapper {
+            padding: 20px;
+            box-sizing: border-box;
+            .news-wrapper {
+                .title {
+                    color: #212121;
+                    font-size: 24px;
+                    line-height: 34px;
+                    font-weight: 400px;
+                }
+                .news-info {
+                    height: 30px;
+                    position: relative;
+                    overflow: hidden;
+                    margin-top: 20px;
+                    font-size: 14px;
+                    line-height: 30px;
+                    height: 30px;
+                    color: #878787;
+                    .info-group {
+                        float: left;
+                        .pub-time {
+                            margin-left: 20px;
+                        }
+                        .category {
+                            margin-left: 20px;
+                            background: #f6766a;
+                            color: #ffffff;
+                            border-radius: 2px;
+                            padding: 0 5px;
+                        }
+                    }
+                    .share-group {
+                        float: right;
+                        overflow: hidden;
+                        span {
+                            float: left;
+                        }
+                        a {
+                            background-image: url("https://www.xfz.cn/static/build/images/share.png");
+                            background-size: 200%;
+                            background-repeat: no-repeat;
+                            height: 30px;
+                            width: 30px;
+                            float: left;
+                        }
+                        .weibo {
+                            background-position: -35px 0;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .article {
+                    margin-top: 20px;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+            .comment-wrapper {
+                border-top: solid 1px #eeeeee;
+                padding-top: 20px;
+                .title {
+                    color: #212121;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                .comment-textarea {
+                    margin-top: 10px;
+                    width: 100%;
+                    resize: none;
+                    outline: none;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    padding: 6px 10px;
+                    box-sizing: border-box;
+                }
+                .nologin-textarea {
+                    height: 40px;
+                    line-height: 26px;
+                    overflow: hidden;
+                }
+                .logined-textarea {
+                    height: 80px;
+                }
+                .submit-btn-group {
+                    text-align: right;
+                    margin-top: 15px;
+                    .submit-btn {
+                        background: #5c87d9;
+                        border: none;
+                        padding: 6px 10px;
+                        color: #ffffff;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+                .comment-list {
+                    margin-top: 20px;
+                    li {
+                        border-bottom: 1px solid #eeeeee;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                        .comment-info {
+                            overflow: hidden;
+                            height: 40px;
+                            line-height: 40px;
+                            color: #878787;
+                            font-size: 16px;
+                            .avatar {
+                                float: left;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                            }
+                            .author {
+                                float: left;
+                                margin-left: 20px;
+                            }
+                            .pub-time {
+                                float: right;
+                            }
+                        }
+                        .comment-content {
+                            margin-left: 60px;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

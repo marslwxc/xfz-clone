@@ -1,0 +1,171 @@
+@import "../common/init.scss";
+@import "../common/constants.scss";
+@import "../common/header.scss";
+@import "../common/body.scss";
+@import "../common/footer.scss";
+.main {
+    .wrapper {
+        .main-content-wrapper {
+            .banner-group {
+                $bannerWidth: 795px;
+                $bannerHeight: 300px;
+                width: $bannerWidth;
+                height: $bannerHeight;
+                position: relative;
+                z-index: 0;
+                overflow: hidden;
+                .banner-ul {
+                    overflow: hidden;
+                    position: absolute;
+                    li {
+                        float: left;
+                        width: $bannerWidth;
+                        height: $bannerHeight;
+                        img {
+                            width: $bannerWidth;
+                            height: $bannerHeight;
+                        }
+                    }
+                }
+                .arrow {
+                    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    font-size: 70px;
+                    margin-top: -45px;
+                    cursor: pointer;
+                }
+                .left-arrow {
+                    left: 20px;
+                }
+                .right-arrow {
+                    right: 20px;
+                }
+                .page-control-group {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 20px;
+                    .page-control {
+                        margin: 0 auto;
+                        overflow: hidden;
+                        li {
+                            width: 10px;
+                            height: 10px;
+                            border: 1px solid white;
+                            margin: 0 8px;
+                            border-radius: 50%;
+                            float: left;
+                            box-sizing: border-box;
+                            cursor: pointer;
+                            &.active {
+                                background: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .list-outer-group {
+                background: white;
+                margin-top: 15px;
+                .list-tab {
+                    width: 100%;
+                    height: 66px;
+                    border: #eeeeee solid 1px;
+                    border-left: none;
+                    border-right: none;
+                    overflow: hidden;
+                    li {
+                        float: left;
+                        padding: 0 10px;
+                        margin-top: 20px;
+                        a {
+                            color: lightslategray;
+                        }
+                        &:first-of-type {
+                            border-left: 5px solid #5c87d9;
+                        }
+                        &.active {
+                            a {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+                .list-inner-group {
+                    li {
+                        padding: 20px;
+                        border-bottom: 1px solid #eeeeee;
+                        overflow: hidden;
+                        .thumbnail-group {
+                            float: left;
+                            height: 130px;
+                            width: 182px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .news-group {
+                            float: right;
+                            width: 524px;
+                            height: 130px;
+                            overflow: hidden;
+                            position: relative;
+                            .title {
+                                font-size: 20px;
+                                line-height: 26px;
+                                max-height: 52px;
+                                overflow: hidden;
+                                a {
+                                    color: #212121;
+                                    &:hover {
+                                        color: #5c87d9;
+                                    }
+                                }
+                            }
+                            .desc {
+                                color: #878787;
+                                font-size: 14px;
+                                line-height: 22px;
+                                margin-top: 10px;
+                            }
+                            .more {
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                height: 20px;
+                                width: 524px;
+                                color: #878787;
+                                .category {
+                                    color: #5c87d9;
+                                }
+                                .pub-time {
+                                    float: right;
+                                    margin-left: 20px;
+                                }
+                                .author {
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                }
+                .load-more-group {
+                    padding: 20px 0;
+                    text-align: center;
+                    .load-more {
+                        width: 400px;
+                        height: 40px;
+                        background: #f7766a;
+                        cursor: pointer;
+                        color: #ffffff;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

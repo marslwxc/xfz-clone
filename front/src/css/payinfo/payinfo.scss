@@ -1,0 +1,71 @@
+@import "../common/init.scss";
+@import "../common/constants.scss";
+@import "../common/header.scss";
+@import "../common/body.scss";
+@import "../common/footer.scss";
+.main {
+    .wrapper {
+        .main-content-wrapper {
+            background: #ffffff;
+            .advertise-group {
+                width: 100%;
+                height: 200px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .document-list {
+                padding: 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li {
+                    width: 370px;
+                    height: 150px;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                    overflow: hidden;
+                    margin-top: 15px;
+                    &:hover {
+                        box-shadow: 2px 2px 2px #ccc;
+                    }
+                    .category-info {
+                        height: 150px;
+                        width: 100px;
+                        float: left;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .document-info {
+                        float: left;
+                        width: 270px;
+                        height: 150px;
+                        position: relative;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        .document-title {
+                            color: #212121;
+                            font-size: 18px;
+                        }
+                        .document-desc {
+                            font-size: 13px;
+                            color: #878787;
+                            margin-top: 12px;
+                        }
+                        .document-price {
+                            position: absolute;
+                            right: 10px;
+                            bottom: 15px;
+                            color: #f73e3e;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
