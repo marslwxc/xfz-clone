@@ -12,4 +12,7 @@ def course_index(request):
     return render(request, 'course/course_index.html', context)
 
 def course_detail(request, course_id):
-    return render(request, 'course/course_detail.html')
+    course = Course.objects.select_related('coursecategory', 'teacher').get(pk=course_id)
+    context = {}
+    context['course'] = course
+    return render(request, 'course/course_detail.html', course)
