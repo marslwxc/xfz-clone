@@ -25,7 +25,7 @@
             <ul class="course-list">
                 {% for course in courses %}
                     <li>
-                        <a href="#">
+                        <a href="{% url 'course:course_detail' course.pk %}">
                             <div class="thumbnail-group">
                                 <img src="{{ course.cover_url }}" alt="" class="thumbnail">
                             </div>
