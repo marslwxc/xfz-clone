@@ -62,4 +62,7 @@ def public_comment(request):
 
 
 def search(request):
-    return render(request, 'search/search.html')
+    newses = News.objects.select_related('category', 'author').all()[:2]
+    context = {}
+    context['newses'] = newses
+    return render(request, 'search/search.html', context)

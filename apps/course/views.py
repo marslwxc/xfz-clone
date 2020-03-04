@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Course, CourseCategory
+from .models import Course, CourseCategory, Teacher
 
 # Create your views here.
 def course_index(request):
@@ -12,7 +12,7 @@ def course_index(request):
     return render(request, 'course/course_index.html', context)
 
 def course_detail(request, course_id):
-    course = Course.objects.select_related('coursecategory', 'teacher').get(pk=course_id)
+    course = Course.objects.select_related('category', 'teacher').get(pk=course_id)
     context = {}
     context['course'] = course
-    return render(request, 'course/course_detail.html', course)
+    return render(request, 'course/course_detail.html', context)
