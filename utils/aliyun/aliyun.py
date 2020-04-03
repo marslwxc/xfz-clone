@@ -7,8 +7,8 @@ from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
 
 
-accessKeyId = 'LTAI4FdkDgEaEsbuFNs4W6sZ'
-accessSecret = 'hQumrotNmEYb5E3DGCRqScFxjIEn9x'
+accessKeyId = ''
+accessSecret = '‘
 
 client = AcsClient(accessKeyId, accessSecret, 'cn-hangzhou')
 
