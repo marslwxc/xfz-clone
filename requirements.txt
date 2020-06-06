@@ -1,7 +1,7 @@
 aliyun-python-sdk-core==2.13.14
 certifi==2019.11.28
 chardet==3.0.4
-Django==2.0
+Django==2.2.13
 django-debug-toolbar==2.2
 django-haystack==2.8.1
 django-redis==4.11.0
